@@ -2,12 +2,18 @@
     
 }
 
+@font-face {
+    font-family: PressStart;
+    src: url(PressStart.ttf);
+  }
+
 body {
     height: 100vh;
     margin: 0;
     background-image: radial-gradient(
         #334b51, black
   );
+    font: 1.0rem PressStart, monospace;
     background-repeat: no-repeat;
     text-shadow: 0 0 3px #d6d6d6;
 }
@@ -17,10 +23,10 @@ header {
     width: 100%;
 }
 
-button {
+article button {
     background:none; 
     border:none;
-    font-size: 1.5em;
+    font: 1.0rem PressStart;
     text-shadow: 0 0 3px #d6d6d6;
     color: whitesmoke;
 }
@@ -34,17 +40,63 @@ h1 {
 
 section {
     margin: auto;
-    width: 50%;
 }
 
 div {
     margin: auto;
 }
 
-#quizbox {
+#start {
     border: 5px dashed;
     padding: 50px;
     margin: 20px;
     text-align: center;
     color: whitesmoke;
+}
+
+
+a:link {
+    color: #33cc33;
+  }
+
+a:visited {
+    color: blueviolet;
+  }
+  
+a:hover {
+    color: yellow
+  }
+
+.hide {
+    visibility: hidden;
+}
+
+#scores {
+    padding: 5px;
+}
+
+#timer {
+    padding: 5px;
+}
+
+#clear {
+    background:none; 
+    border: 5px dashed;
+    padding: 30px;
+    grid-row: 2 / span 2;
+    font: 1.0rem PressStart, monospace;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 0 0 3px #d6d6d6;
+}
+
+#goback {
+    background: none;
+    border: 5px dashed;
+    padding: 30px;
+    grid-row: grid-row: 1 / span 2;
+    font: 1.0rem PressStart, monospace;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 0 0 3px #d6d6d6;
 }
