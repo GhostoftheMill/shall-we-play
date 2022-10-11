@@ -17,6 +17,14 @@ header {
     width: 100%;
 }
 
+button {
+    background:none; 
+    border:none;
+    font-size: 1.5em;
+    text-shadow: 0 0 3px #d6d6d6;
+    color: whitesmoke;
+}
+
 h1 {
     text-align: center;
     color: #33cc33;
@@ -28,11 +36,15 @@ section {
     margin: auto;
     width: 50%;
 }
+
+div {
+    margin: auto;
+}
+
 #quizbox {
     border: 5px dashed;
     padding: 50px;
     margin: 20px;
     text-align: center;
-    font-size: 1.5em;
     color: whitesmoke;
 }
