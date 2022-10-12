@@ -31,6 +31,11 @@ section {
     width: 100%;
 }
 
+container {
+    margin: auto;
+    width: 100%;
+}
+
 div {
     margin: auto;
     width: 100%;
@@ -61,6 +66,20 @@ a:hover {
 
 .hide {
     visibility: hidden;
+}
+
+#questions {
+    font: 1.0rem PressStart, monospace;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 0 0 3px #d6d6d6;
+}
+
+#choices {
+    font: 1.0rem PressStart, monospace;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 0 0 3px #d6d6d6;
 }
 
 #scores {
@@ -95,4 +114,45 @@ a:hover {
     text-align: center;
     color: whitesmoke;
     text-shadow: 0 0 3px #d6d6d6;
+}
+
+.feedback {
+    font: 1.0rem PressStart, monospace;
+    text-align: center;
+    color: #33cc33;
+    text-shadow: 0 0 3px whitesmoke;
+}
+
+p  {
+    font: 1.0rem PressStart, monospace;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 3px whitesmoke;
+}
+
+ol {
+    font: 1.0rem PressStart, monospace;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 3px whitesmoke;
+}
+
+.timer {
+    font: 1.0rem PressStart, monospace;
+    color: yellow;
+    text-shadow: 0 0 3px whitesmoke;
+}
+
+p button {
+    background: none;
+    border: none;
+    font: 1.0rem PressStart, monospace;
+    color: white;
+    text-shadow: 0 0 3px whitesmoke;
+}
+
+h2 {
+    font: 1.0rem PressStart, monospace;
+    color: whitesmoke;
+    text-shadow: 0 0 3px whitesmoke;
 }

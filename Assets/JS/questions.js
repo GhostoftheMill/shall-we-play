@@ -83,7 +83,7 @@ var questions = [
   {
     title:
       'The HTML element used to embed executable code or date is:',
-    choices: ['<script>'>, '<code>', '<execute>', '<choose>'],
-    answer: '<script>',
+    choices: ['script', 'code', 'execute', 'choose'],
+    answer: 'script',
   },
 ];

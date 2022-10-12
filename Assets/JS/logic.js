@@ -48,7 +48,7 @@ function startQuiz() {
         for (var i = 0; i < currentQuestion.choices.length; i++) {
             // create new button for each choice
             var choice = currentQuestion.choices[i];
-            var choiceNodeEl = document.createElement('button')
+            var buttonEl = document.createElement('button')
             buttonEl.setAttribute('class', 'choice')
             buttonEl.setAttribute('value', choice)
             buttonEl.textContent = i + 1 + '.' + choice;
@@ -81,13 +81,11 @@ function startQuiz() {
             timerEl.textContent = time;
             feedbackEl.textContent = "Oops."
         } else {
-            //correct scenario
             feedbackEl.textContent = "1up"
-            // move to next question
         }
         // flash right/wrong feedback on page
     feedbackEl.setAttribute('class', 'feedback');
-    setTimeout(fuction () {
+    setTimeout(function () {
         feedbackEl.setAttribute('class', 'feedback hide');
     }, 3000)
         // move to next question
@@ -148,7 +146,7 @@ function startQuiz() {
     
             // save to localstorage
             highscores.push(newScore);
-            window.location.setItem('highscores', JSON.stringify(highscores));
+            window.localStorage.setItem('highscores', JSON.stringify(highscores));
     
             // redirect to next page
             window.location.href = 'highscore.html';
