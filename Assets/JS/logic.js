@@ -1,8 +1,6 @@
 //Left to fix
 //timer start at x time
 //time stop at endquiz
-//correct sound on correct answer
-//incorrect sound on incorrect answer
 //maybe make choice class column?
 
 // variables to keep track of quiz state
@@ -20,8 +18,8 @@ var initialsEl = document.getElementById('initials');
 var feedbackEl = document.getElementById('feedback');
 
 // sound effects
-var sfxRight = new Audio('assets/sfx/correct.wav');
-var sfxWrong = new Audio('assets/sfx/incorrect.wav');
+var sfxRight = new Audio('assets/correct.wav');
+var sfxWrong = new Audio('assets/incorrect.wav');
 
 
 function startQuiz() {
@@ -76,6 +74,7 @@ function questionClick(event) {
     
     // penalize time
             time -= 10;
+            sfxWrong.play();
         if (time < 0) {
             time = 0;
         }
@@ -83,7 +82,8 @@ function questionClick(event) {
         timerEl.textContent = time;
         feedbackEl.textContent = "Oops."
     } else {
-        feedbackEl.textContent = "1up"
+        feedbackEl.textContent = "1up";
+        sfxRight.play();
     }
 
     // flash right/wrong feedback on page
