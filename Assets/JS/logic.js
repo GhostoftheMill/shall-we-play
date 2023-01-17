@@ -3,7 +3,7 @@
 //time stop at endquiz
 //correct sound on correct answer
 //incorrect sound on incorrect answer
-//css format on answer buttons
+//maybe make choice class column?
 
 // variables to keep track of quiz state
 var currentQuestionIndex = 0;

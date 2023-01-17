@@ -91,7 +91,11 @@ a:hover {
     text-shadow: 0 0 3px #d6d6d6;
 }
 
-#choices {
+.choice {
+    margin: 0 5px 0 5px;
+    padding: 10px;
+    background: none;
+    border: 5px dashed;
     font: 1.0rem PressStart, monospace;
     text-align: center;
     color: whitesmoke;
