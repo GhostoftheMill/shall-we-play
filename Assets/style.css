@@ -16,7 +16,10 @@ body {
 
 header {
     margin: auto;
-    width: 100%;
+}
+
+#gameover {
+    margin: 50px 0 0 0 
 }
 
 h1 {
@@ -27,13 +30,13 @@ h1 {
 }
 
 section {
+    display: flex;
     margin: auto;
     width: 100%;
 }
 
-container {
+article {
     margin: auto;
-    width: 100%;
 }
 
 div {
@@ -52,9 +55,22 @@ div {
     text-shadow: 0 0 3px #d6d6d6;
 }
 
+#boxes {
+    flex-direction: column;
+}
+
+#space {
+    justify-content: space-around;
+    margin: 50px;
+}
+
 a:link {
     color: #33cc33;
   }
+
+.wrapper {
+   margin: 30px; 
+}
 
 a:visited {
     color: blueviolet;
@@ -92,6 +108,11 @@ a:hover {
     color: whitesmoke;
     font: 1.0rem PressStart;
     text-shadow: 0 0 3px #d6d6d6;
+}
+
+#end-screen {
+    display: flex;
+    flex-direction: column;
 }
 
 #clear {
