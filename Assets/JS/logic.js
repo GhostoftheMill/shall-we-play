@@ -5,7 +5,7 @@
 
 // variables to keep track of quiz state
 var currentQuestionIndex = 0;
-var time = questions.length * 10;
+var time = questions.length * 15;
 var timerId;
 
 // variables to reference DOM elements
@@ -21,6 +21,7 @@ var feedbackEl = document.getElementById('feedback');
 var sfxRight = new Audio('assets/correct.wav');
 var sfxWrong = new Audio('assets/incorrect.wav');
 
+let startTimer;
 
 function startQuiz() {
     // hide start screen
@@ -30,8 +31,7 @@ function startQuiz() {
     // un-hide questions section
     questionsEl.removeAttribute('class');
     //start timer (high)
-    setInterval(clockTick, 1000);
-    
+    startTimer = setInterval(clockTick, 1000);
     //show starting time (high)
     timerEl.textContent = time;
     getQuestion();
@@ -73,7 +73,7 @@ function questionClick(event) {
     //incorrect answer scenario
     
     // penalize time
-            time -= 10;
+            time -= 20;
             sfxWrong.play();
         if (time < 0) {
             time = 0;
@@ -97,14 +97,16 @@ function questionClick(event) {
     // check if we've run out of questions
     if (time <= 0 || currentQuestionIndex === questions.length) {
         quizEnd();
+        
     } else {
         getQuestion();
     }
 }
     
 function quizEnd() {
-    // stop timer
-    clearInterval(clockTick);
+        // stop clockTick for heaven's sake!!!
+    clearInterval(startTimer);
+    timerEl.textContent = 'The End';
         
     // show end screen
     var endScreenEl = document.getElementById('end-screen');
@@ -113,9 +115,11 @@ function quizEnd() {
     // show final score
     var finalScoreEl = document.getElementById('final-score');
     finalScoreEl.textContent = time;
+
     
     // hide questions section
     questionsEl.setAttribute('class', 'hide');
+    //timerEl.textContent = '0';
 }
  
 // update time    
@@ -123,10 +127,18 @@ function clockTick() {
     time--;
     timerEl.textContent = time;
     
-    // check if user ran out of time
-    if (time <= 0) {
-        quizEnd();
+    if (time <=0) {
+       timerEl.textContent = '0';
     }
+    //check if user ran out of time
+    if (time <= 0) {
+        quizEnd();  
+    };
+    /*if (time <= 0 || currentQuestionIndex === questions.length) {
+        quizEnd();
+        return;
+        
+    }*/ 
 }
     
     
