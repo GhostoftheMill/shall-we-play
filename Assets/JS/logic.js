@@ -106,7 +106,6 @@ function questionClick(event) {
 function quizEnd() {
         // stop clockTick for heaven's sake!!!
     clearInterval(startTimer);
-    timerEl.textContent = 'The End';
         
     // show end screen
     var endScreenEl = document.getElementById('end-screen');
@@ -131,9 +130,9 @@ function clockTick() {
        timerEl.textContent = '0';
     }
     //check if user ran out of time
-    if (time <= 0) {
+    /*if (time <= 0) {
         quizEnd();  
-    };
+    };*/
     /*if (time <= 0 || currentQuestionIndex === questions.length) {
         quizEnd();
         return;
